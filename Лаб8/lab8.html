@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mix - Learning Solution</title>
+    <!-- Подключаем шрифты Google (близкие по стилю: Playfair Display для заголовка и Inter для текста) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Базовые сбросы стилей */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #17144a; /* Темно-синий цвет текста */
+            background-color: #ffffff;
+            line-height: 1.5;
+            display: flex;
+            justify-content: center;
+            padding: 40px 20px;
+        }
+
+        /* Контейнер для контента */
+        .container {
+            max-width: 900px;
+            width: 100%;
+        }
+
+        /* Логотип */
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 60px;
+            color: #17144a;
+        }
+
+        /* Заголовок */
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 56px;
+            line-height: 1.1;
+            font-weight: 600;
+            margin-bottom: 24px;
+            max-width: 600px;
+        }
+
+        /* Подзаголовок / Описание */
+        p {
+            font-size: 16px;
+            color: #17144a;
+            opacity: 0.8;
+            max-width: 450px;
+            margin-bottom: 40px;
+        }
+
+        /* Кнопки */
+        .buttons {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 60px;
+        }
+
+        .btn {
+            padding: 12px 28px;
+            border-radius: 50px;
+            font-family: 'Inter', sans-serif;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .btn-primary {
+            background-color: #2f54eb; /* Ярко-синий */
+            color: #ffffff;
+            border-color: #2f54eb;
+        }
+
+        .btn-primary:hover {
+            background-color: #1e3bc4;
+            border-color: #1e3bc4;
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: #17144a;
+            border-color: #f7d6d0; /* Светло-розовый */
+        }
+
+        .btn-secondary:hover {
+            border-color: #e5b8af;
+        }
+
+        /* Блок с иллюстрацией */
+        .illustration {
+            width: 100%;
+            max-width: 600px;
+            display: block;
+        }
+
+        /* Адаптивность для мобильных устройств */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 40px;
+            }
+            
+            .buttons {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .btn {
+                width: 100%;
+                text-align: center;
+            }
+
+            .logo {
+                margin-bottom: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Шапка с логотипом -->
+        <header>
+            <div class="logo">Mix</div>
+        </header>
+
+        <!-- Основной контент -->
+        <main>
+            <h1>The world's first learning solution for everyone</h1>
+            
+            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum.</p>
+            
+            <div class="buttons">
+                <button class="btn btn-primary">Get started</button>
+                <button class="btn btn-secondary">Create account</button>
+            </div>
+
+            <!-- Иллюстрация (замените 'illustration.png' на путь к вашему файлу) -->
+            <img src="resources/illustration.png" alt="Illustration of people communicating via smartphone" class="illustration">
+        </main>
+    </div>
+
+</body>
+</html>
