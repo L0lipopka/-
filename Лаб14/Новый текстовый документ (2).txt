@@ -1,0 +1,37 @@
+1. Заголовок (например, h1 или h2)
+Свойства: opacity, transform (обычно translateY), иногда filter (blur).
+
+Начальное значение: opacity: 0, transform: translateY(100px) (сдвиг вниз на 100px).
+
+Конечное значение: opacity: 1, transform: translateY(0).
+
+Время: для заголовков (t-title) — 1.2 секунды.
+
+Функция плавности: cubic-bezier(.19, 1, .22, 1) (плавное затухание).
+
+2. Абзац (например, p или div с классом t-text)
+Свойства: opacity, transform (translateY или translateX).
+
+Начальное значение: opacity: 0, transform: translateY(100px).
+
+Конечное значение: opacity: 1, transform: translateY(0).
+
+Время: для текста (t-text, t-descr) — 0.7 секунды.
+
+Функция плавности: та же cubic-bezier(.19, 1, .22, 1).
+
+3. Возможные вариации
+В Tilda доступны разные стили анимации, которые могут быть назначены через атрибут data-animate-style:
+
+fadein — только прозрачность.
+
+fadeinup — прозрачность + сдвиг снизу вверх.
+
+fadeindown — прозрачность + сдвиг сверху вниз.
+
+fadeinleft / fadeinright — прозрачность + горизонтальный сдвиг.
+
+fade-in-blur — прозрачность + размытие (от blur(12px) до blur(0)).
+
+zoomin / zoomout — прозрачность + масштабирование (от scale(0.9) до scale(1) или от scale(1.2)).
+

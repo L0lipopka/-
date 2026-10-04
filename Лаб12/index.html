@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кофейная подписка</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Roboto', 'Arial', sans-serif;
+            color: #2c3e50;
+            line-height: 1.6;
+            background-color: #ffffff;
+        }
+
+        .container {
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        h2 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Секция "Ложка для каппинга" */
+        .cupping-section {
+            padding: 80px 0;
+        }
+
+        .cupping-grid {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+        }
+
+        .cupping-image {
+            flex: 1;
+        }
+
+        .cupping-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 4px;
+            object-fit: cover;
+        }
+
+        .cupping-content {
+            flex: 1;
+        }
+
+        .cupping-content p {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 25px;
+        }
+
+        .btn-primary {
+            display: inline-block;
+            background-color: #2cb5e8;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-weight: 500;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: #1a9cc9;
+        }
+
+        /* Секция "Отзывы" */
+        .testimonials-section {
+            padding: 80px 0;
+            background-color: #fafafa;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+        }
+
+        .testimonial-card {
+            text-align: center;
+        }
+
+        .testimonial-photo {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            margin-bottom: 20px;
+            overflow: hidden;
+            border-radius: 4px;
+        }
+
+        .testimonial-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .testimonial-card h3 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        .testimonial-card p {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.5;
+        }
+
+        /* Адаптивность */
+        @media (max-width: 900px) {
+            .cupping-grid {
+                flex-direction: column-reverse;
+                gap: 30px;
+            }
+            .testimonials-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+            h2 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <section class="cupping-section">
+        <div class="container">
+            <div class="cupping-grid">
+                <div class="cupping-image">
+                    <img src="spoon.jpg" alt="Ложка для каппинга в чашке кофе">
+                </div>
+                <div class="cupping-content">
+                    <h2>Ложка для каппинга</h2>
+                    <p>Всегда лучше иметь свою ложку для пробы кофе, чтобы не «хлюпать» из чужой. Подробнее о том, что такое каппинг, в нашем блоге.</p>
+                    <a href="#" class="btn-primary">Купить ложку</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials-section">
+        <div class="container">
+            <h2 class="section-title">Отзывы наших клиентов</h2>
+            <div class="testimonials-grid">
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-photo">
+                        <img src="ekaterina.jpg" alt="Екатерина">
+                    </div>
+                    <h3>Екатерина</h3>
+                    <p>Хочу поделиться отзывом о кофе известной марки "Кофейная кантата" со вкусом бельгийский вафли.</p>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-photo">
+                        <img src="valery.jpg" alt="Валерий">
+                    </div>
+                    <h3>Валерий</h3>
+                    <p>По вкусу ничего не напоминает кофе, просто вода с какой-то горечью. По запаху аналогично.</p>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-photo">
+                        <img src="sergey.jpg" alt="Сергей">
+                    </div>
+                    <h3>Сергей</h3>
+                    <p>Я опишу своими словами, кофе очень вкусный, наверное лучший что я пил за рубежом и в Украине.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
