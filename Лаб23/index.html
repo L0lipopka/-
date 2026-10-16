@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мобильный прототип</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 30px 15px;
+            background-color: #e8e8e8;
+            color: #333;
+            display: flex;
+            justify-content: center;
+        }
+        .phone-frame {
+            width: 414px;
+            height: 896px;
+            background: #1a1a1a;
+            border-radius: 50px;
+            padding: 12px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            position: relative;
+        }
+        .phone-notch {
+            position: absolute;
+            top: 12px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 180px;
+            height: 26px;
+            background: #1a1a1a;
+            border-radius: 0 0 20px 20px;
+            z-index: 10;
+        }
+        .phone-screen {
+            width: 100%;
+            height: 100%;
+            background: #fff;
+            border-radius: 40px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            position: relative;
+        }
+        .phone-screen::-webkit-scrollbar {
+            width: 0;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px 15px 15px 15px;
+            border-bottom: 2px solid #eee;
+        }
+        .logo {
+            width: 40px;
+            height: 40px;
+            background: #333;
+            border-radius: 50%;
+        }
+        .search-icon {
+            width: 30px;
+            height: 30px;
+            border: 2px solid #333;
+            border-radius: 50%;
+            position: relative;
+        }
+        .search-icon::after {
+            content: '';
+            position: absolute;
+            width: 10px;
+            height: 2px;
+            background: #333;
+            bottom: -2px;
+            right: -5px;
+            transform: rotate(45deg);
+        }
+        .hero {
+            padding: 20px 15px;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+        .hero p {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 10px;
+            background: #fff;
+            border: 2px solid #333;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            box-sizing: border-box;
+        }
+        .image-placeholder {
+            width: 100%;
+            height: 200px;
+            background: #e0e0e0;
+            border: 2px dashed #999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-size: 40px;
+            margin-top: 20px;
+        }
+        .features {
+            padding: 20px 15px;
+            border-top: 2px solid #eee;
+        }
+        .features h2 {
+            font-size: 20px;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .features .intro-text {
+            font-size: 14px;
+            color: #666;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .feature-item {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .feature-icon {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+        .feature-item h3 {
+            font-size: 18px;
+            margin: 0 0 10px 0;
+        }
+        .feature-item p {
+            font-size: 14px;
+            color: #666;
+            margin: 0;
+            line-height: 1.4;
+        }
+        footer {
+            padding: 20px;
+            background: #f9f9f9;
+            text-align: center;
+            font-size: 12px;
+            color: #999;
+            border-top: 2px solid #eee;
+        }
+        @media (max-width: 500px) {
+            body {
+                padding: 0;
+                background: #fff;
+            }
+            .phone-frame {
+                width: 100%;
+                height: 100vh;
+                border-radius: 0;
+                padding: 0;
+                box-shadow: none;
+                background: #fff;
+            }
+            .phone-notch {
+                display: none;
+            }
+            .phone-screen {
+                border-radius: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="phone-frame">
+        <div class="phone-notch"></div>
+        <div class="phone-screen">
+            <header>
+                <div class="logo"></div>
+                <div class="search-icon"></div>
+            </header>
+
+            <section class="hero">
+                <h1>Заголовок</h1>
+                <p>Текст описания проекта. Здесь будет рассказано о том, как музыканты могут совместно сочинять музыку онлайн.</p>
+                <div class="btn">Кнопка</div>
+                <div class="btn">Кнопка</div>
+                <div class="image-placeholder">X</div>
+            </section>
+
+            <section class="features">
+                <h2>Заголовок раздела</h2>
+                <p class="intro-text">Короткое описание того, что умеет приложение.</p>
+
+                <div class="feature-item">
+                    <div class="feature-icon">👍</div>
+                    <h3>Название фичи</h3>
+                    <p>Описание первой возможности. Например, совместное редактирование трека.</p>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon">📶</div>
+                    <h3>Название фичи</h3>
+                    <p>Описание второй возможности. Например, онлайн-джем без задержек.</p>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon">👍</div>
+                    <h3>Название фичи</h3>
+                    <p>Описание третьей возможности. Например, библиотека сэмплов.</p>
+                </div>
+            </section>
+
+            <footer>
+                <p>© 2026 Music Startup. Все права защищены.</p>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>
